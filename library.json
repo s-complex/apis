@@ -1,7 +1,7 @@
 [
   {
     "enable": true,
-    "title": "Library 公告 API 测试",
-    "content": "我们正在测试公告 API，以在不更改 Library 内容时修改公告内容。"
+    "title": "档案馆目前存在问题",
+    "content": "SliverRiver's Library 目前无法通过无刷新导航正常返回主页，需要用户返回后手动刷新一次页面。我们正在尝试解决该问题。"
   }
 ]
