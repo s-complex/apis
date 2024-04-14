@@ -1,4 +1,4 @@
-import {
+const {
   fs,
   writeFileSync,
   mkdirSync,
@@ -6,9 +6,9 @@ import {
   copySync,
   existsSync,
   rmSync,
-} from "fs-extra";
-import path from "path";
-import yaml from "js-yaml";
+} = require("fs-extra");
+const path = require("path");
+const yaml = require("js-yaml");
 
 const srcDir = path.join(__dirname, "src");
 const distDir = path.join(__dirname, "dist");
