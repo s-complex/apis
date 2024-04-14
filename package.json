@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "node index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "js-yaml": "^4.1.0"
+  }
+}
