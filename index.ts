@@ -42,8 +42,12 @@ try {
 
 try {
   const announcementData = yaml.load(readFileSync(announcementPath, "utf8"));
-  writeFileSync(annoucementDistPath, JSON.stringify(announcementData, null, 2));
-  console.log("Successfully generated annoucements.")
+  if (announcementData && announcementData.length != 0) {
+    writeFileSync(annoucementDistPath, JSON.stringify(announcementData, null, 2));
+    console.log("Successfully generated annoucements.")
+  } else {
+    console.log("No announcement, skipped.")
+  }
 } catch (e) {
   console.error(e);
 }
