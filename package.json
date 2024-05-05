@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "build": "node index.ts"
-  },
   "devDependencies": {
     "@types/node": "^20.12.7"
   },
