@@ -1,14 +1,13 @@
-const {
-  fs,
+import {
   writeFileSync,
   mkdirSync,
   readFileSync,
   copySync,
   existsSync,
   rmSync,
-} = require("fs-extra");
-const path = require("path");
-const yaml = require("js-yaml");
+} from "fs-extra";
+import path from "path";
+import yaml from "js-yaml";
 
 const srcDir = path.join(__dirname, "src");
 const distDir = path.join(__dirname, "dist");
@@ -43,10 +42,13 @@ try {
 try {
   const announcementData = yaml.load(readFileSync(announcementPath, "utf8"));
   if (announcementData && announcementData.length != 0) {
-    writeFileSync(annoucementDistPath, JSON.stringify(announcementData, null, 2));
-    console.log("Successfully generated annoucements.")
+    writeFileSync(
+      annoucementDistPath,
+      JSON.stringify(announcementData, null, 2)
+    );
+    console.log("Successfully generated annoucements.");
   } else {
-    console.log("No announcement, skipped.")
+    console.log("No announcement, skipped.");
   }
 } catch (e) {
   console.error(e);
